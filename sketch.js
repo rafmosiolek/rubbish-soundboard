@@ -1,4 +1,5 @@
 var dogButton = new Button('Dog', 10, 10);
+var catButton = new Button('Cat', 120, 10);
 
 
 function setup() {
@@ -8,4 +9,15 @@ function setup() {
 function draw() {
     background(220);
     dogButton.draw();
+    catButton.draw();
+}
+
+function mousePressed() {
+    if (dogButton.containsMouse()) {
+        alert("woof");
+    }
+
+    if (catButton.containsMouse()) {
+        alert("meow");
+    }
 }
